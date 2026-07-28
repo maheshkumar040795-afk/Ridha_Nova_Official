@@ -3,13 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ridhanova Workforce Solutions — Premium recruitment, HR consulting, and workforce management in Chennai, India. Connecting Talent. Building Success.">
-  <meta name="keywords" content="recruitment agency Chennai, staffing solutions, HR consulting, permanent staffing, contract staffing, executive search">
+
+  <!-- Primary SEO -->
+  <title>Ridhanova Workforce Solutions | Recruitment & HR Consulting in Chennai</title>
+  <meta name="description" content="Ridhanova Workforce Solutions delivers end-to-end recruitment, HR consulting, and workforce management across Chennai and Tamil Nadu. Permanent staffing, executive search, bulk hiring, and campus recruitment — connecting talent with visionary organizations.">
+  <meta name="keywords" content="recruitment agency Chennai, staffing solutions Tamil Nadu, HR consulting Chennai, permanent staffing, contract staffing, executive search Chennai, bulk recruitment, campus recruitment, workforce management, placement agency Chennai">
   <meta name="author" content="Ridhanova Workforce Solutions">
-  <title>Ridhanova Workforce Solutions | Connecting Talent. Building Success.</title>
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0f1229">
+  <link rel="canonical" href="https://ridhanova.com/">
+
+  <!-- Geo / Local SEO — Madipakkam, Chennai -->
+  <meta name="geo.region" content="IN-TN">
+  <meta name="geo.placename" content="Chennai">
+  <meta name="geo.position" content="12.965;80.198">
+  <meta name="ICBM" content="12.965, 80.198">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ridhanova Workforce Solutions">
+  <meta property="og:title" content="Ridhanova Workforce Solutions | Connecting Talent. Building Success.">
+  <meta property="og:description" content="End-to-end recruitment, HR consulting, and workforce management across Chennai and Tamil Nadu. Permanent staffing, executive search, bulk hiring, and campus recruitment.">
+  <meta property="og:url" content="https://ridhanova.com/">
+  <meta property="og:image" content="https://res.cloudinary.com/lfgnusmd/image/upload/v1785264125/Hiring_oxsjnx.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ridhanova Workforce Solutions | Connecting Talent. Building Success.">
+  <meta name="twitter:description" content="End-to-end recruitment, HR consulting, and workforce management across Chennai and Tamil Nadu.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/lfgnusmd/image/upload/v1785264125/Hiring_oxsjnx.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f1229'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='%23c9a84c' font-family='Arial' font-weight='bold'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48x48.png">
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Structured Data — EmploymentAgency / LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EmploymentAgency",
+    "name": "Ridhanova Workforce Solutions",
+    "url": "https://ridhanova.com/",
+    "logo": "https://ridhanova.com/assets/icons/android-chrome-512x512.png",
+    "image": "https://res.cloudinary.com/lfgnusmd/image/upload/v1785264125/Hiring_oxsjnx.jpg",
+    "description": "Premium recruitment, HR consulting, and workforce management in Chennai, India.",
+    "telephone": "+91-63848-77877",
+    "email": "ridhacon@gmail.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "X57Q+G8H, Alamelumangapuram 1st Main Rd, Ganesh Nagar, Iyappa Nagar, Madipakkam, Moovarasampettai",
+      "addressLocality": "Chennai",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "600091",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.965,
+      "longitude": 80.198
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Tamil Nadu"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  }
+  </script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +118,7 @@
       --shadow:0 20px 50px rgba(0,0,0,.35); --shadow-lg:0 30px 70px rgba(0,0,0,.5);
     }
     *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
+    html{scroll-behavior:smooth; overflow-x:hidden; max-width:100%;}
     body{
       font-family:'Inter',sans-serif; color:var(--ink); background:var(--bg);
       overflow-x:hidden; transition:background .3s, color .3s;
@@ -173,6 +246,9 @@
     .about-visual{font-size:4rem; color:var(--gold);}
     .about-experience-badge{
       position:absolute; bottom:-26px; right:-14px; padding:20px 24px; text-align:center; max-width:200px;
+    }
+    @media (max-width:575.98px){
+      .about-experience-badge{right:8px; bottom:-20px; padding:16px 18px; max-width:170px;}
     }
     .exp-number{display:block; font-family:'Poppins',sans-serif; font-weight:800; font-size:1.9rem; color:var(--gold);}
     .exp-text{display:block; font-size:.76rem; color:var(--muted); margin-top:4px;}

@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ridhanova Workforce Solutions — Premium recruitment, HR consulting, and workforce management in Chennai, India. Connecting Talent. Building Success.">
+  <meta name="keywords" content="recruitment agency Chennai, staffing solutions, HR consulting, permanent staffing, contract staffing, executive search">
+  <meta name="author" content="Ridhanova Workforce Solutions">
+  <title>Ridhanova Workforce Solutions | Connecting Talent. Building Success.</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f1229'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='%23c9a84c' font-family='Arial' font-weight='bold'%3ER%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Swiper Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Custom Styles — fully self-contained below (no external assets/ files needed) -->
+
+  <!-- ==================== CORE DESIGN SYSTEM (self-contained) ==================== -->
+  <style>
+    :root{
+      --navy:#0f1229; --navy-2:#171b3d; --gold:#c9a84c; --gold-light:#f0d27a;
+      --ink:#0f172a; --muted:#5b6576; --line:rgba(15,23,42,.08);
+      --bg:#ffffff; --bg-soft:#f7f8fb; --radius:16px;
+      --shadow:0 20px 50px rgba(15,23,42,.08);
+      --shadow-lg:0 30px 70px rgba(15,23,42,.14);
+    }
+    [data-theme="dark"]{
+      --ink:#f1f5f9; --muted:#a0aac0; --line:rgba(255,255,255,.10);
+      --bg:#0b0d1f; --bg-soft:#12142c;
+      --shadow:0 20px 50px rgba(0,0,0,.35); --shadow-lg:0 30px 70px rgba(0,0,0,.5);
+    }
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:'Inter',sans-serif; color:var(--ink); background:var(--bg);
+      overflow-x:hidden; transition:background .3s, color .3s;
+    }
+    h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif;}
+    a{text-decoration:none;}
+    img{max-width:100%;}
+    .section{padding:90px 0;}
+    @media (max-width:767.98px){.section{padding:60px 0;}}
+    .text-gradient{background:linear-gradient(135deg,var(--gold),#8a6fd8); -webkit-background-clip:text; background-clip:text; color:transparent;}
+    .text-gradient-gold{background:linear-gradient(135deg,var(--gold-light),var(--gold)); -webkit-background-clip:text; background-clip:text; color:transparent;}
+    .text-gold{color:var(--gold) !important;}
+
+    .glass-card{
+      background:var(--bg); border:1px solid var(--line); border-radius:var(--radius);
+      box-shadow:var(--shadow); transition:transform .25s, box-shadow .25s;
+    }
+    .glass-card:hover{transform:translateY(-4px); box-shadow:var(--shadow-lg);}
+
+    /* ---------- Loading Screen ---------- */
+    .loading-screen{
+      position:fixed; inset:0; z-index:9999; background:var(--navy);
+      display:flex; align-items:center; justify-content:center;
+      transition:opacity .5s, visibility .5s;
+    }
+    .loading-screen.loaded{opacity:0; visibility:hidden;}
+    .loading-content{text-align:center; color:#fff;}
+    .loading-logo{display:flex; align-items:center; justify-content:center; gap:10px; font-family:'Poppins',sans-serif; font-weight:700; font-size:1.5rem; letter-spacing:2px; margin-bottom:22px;}
+    .logo-icon{color:var(--gold); font-size:1.6rem;}
+    .loading-bar{width:220px; height:4px; background:rgba(255,255,255,.15); border-radius:4px; overflow:hidden; margin:0 auto;}
+    .loading-progress{height:100%; width:0%; background:linear-gradient(90deg,var(--gold),var(--gold-light)); animation:loadbar 1.4s ease-in-out forwards;}
+    @keyframes loadbar{from{width:0%;} to{width:100%;}}
+    .loading-tagline{margin-top:16px; font-size:.85rem; color:rgba(255,255,255,.6); letter-spacing:.5px;}
+
+    /* ---------- Header / Navbar ---------- */
+    .site-header{
+      position:fixed; top:0; left:0; right:0; z-index:1000;
+      padding:14px 0; background:#ffffff; transition:padding .3s, box-shadow .3s;
+      box-shadow:0 2px 18px rgba(15,23,42,.10);
+      border-bottom:1px solid rgba(15,23,42,.06);
+    }
+    .site-header.scrolled{padding:10px 0; box-shadow:0 6px 26px rgba(15,23,42,.14);}
+    .navbar-brand{display:flex; align-items:center; gap:10px;}
+    .brand-icon{
+      width:42px; height:42px; border-radius:10px; display:grid; place-items:center;
+      background:linear-gradient(135deg,var(--navy),var(--navy-2)); color:var(--gold); font-size:1.15rem; flex:0 0 auto;
+    }
+    .brand-text{display:flex; flex-direction:column; line-height:1.15;}
+    .brand-name{font-family:'Poppins',sans-serif; font-weight:800; font-size:1.05rem; letter-spacing:1px; color:#0f172a;}
+    .brand-sub{font-size:.68rem; color:#64748b; letter-spacing:.5px;}
+    .nav-link{color:#334155 !important; font-weight:500; font-size:.94rem; padding:8px 14px !important; opacity:.92; transition:color .2s, opacity .2s;}
+    .nav-link.active,.nav-link:hover{opacity:1; color:var(--gold) !important;}
+    .navbar-toggler{border-color:rgba(15,23,42,.2) !important;}
+    @media (max-width:991.98px){
+      .navbar-collapse.show{
+        background:#ffffff; border-radius:14px; padding:14px 18px; margin-top:12px;
+        box-shadow:0 20px 50px rgba(15,23,42,.16); border:1px solid rgba(15,23,42,.06);
+      }
+    }
+    .nav-btn{border-radius:9px !important; font-weight:600 !important;}
+    .btn-primary{
+      background:linear-gradient(135deg,var(--gold),var(--gold-light)) !important; border:0 !important;
+      color:#0f172a !important; font-weight:600;
+    }
+    .btn-primary:hover{filter:brightness(1.05);}
+    .btn-outline-primary{border-color:var(--gold) !important; color:var(--gold) !important;}
+    .btn-outline-primary:hover{background:var(--gold) !important; color:#0f172a !important;}
+    .btn-outline-light{border-color:rgba(255,255,255,.55) !important; color:#fff !important;}
+    .btn-outline-light:hover{background:#fff !important; color:var(--navy) !important;}
+
+    /* ---------- Hero ---------- */
+    .hero-section{
+      position:relative; background:radial-gradient(ellipse at top left, var(--navy-2), var(--navy) 60%);
+      overflow:hidden;
+    }
+    .particles-bg{position:absolute; inset:0; z-index:0;}
+    .hero-gradient-overlay{
+      position:absolute; inset:0; z-index:1;
+      background:radial-gradient(circle at 80% 20%, rgba(201,168,76,.16), transparent 55%);
+    }
+    .hero-container{position:relative; z-index:2; padding-top:130px; padding-bottom:60px;}
+    .hero-container .row.align-items-center{align-items:flex-start !important;}
+    .hero-illustration{margin-top:6px;}
+    .hero-badge{
+      display:inline-flex; align-items:center; gap:8px; padding:8px 16px; border-radius:30px;
+      background:rgba(201,168,76,.12); border:1px solid rgba(201,168,76,.35); color:var(--gold-light);
+      font-size:.8rem; font-weight:600; margin-bottom:22px;
+    }
+    .hero-title{font-size:clamp(2.1rem,4.4vw,3.4rem); font-weight:800; color:#fff; line-height:1.18; margin-bottom:18px;}
+    .hero-subtitle{color:var(--gold-light); font-size:1.05rem; font-weight:500; min-height:1.6em; margin-bottom:12px;}
+    .hero-description{color:rgba(255,255,255,.72); font-size:1rem; line-height:1.7; max-width:520px; margin-bottom:28px;}
+    .hero-cta{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:34px;}
+    .hero-btn{padding:13px 26px !important; border-radius:11px !important; font-size:.96rem;}
+    .hero-trust{display:flex; gap:26px; flex-wrap:wrap;}
+    .trust-item{display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.65); font-size:.82rem;}
+    .trust-item i{color:var(--gold);}
+    .hero-illustration{position:relative;}
+    .hero-visual-panel{padding:42px 32px; text-align:center; background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.15);}
+    .hero-visual-icon{font-size:2.6rem; color:var(--gold); margin-bottom:16px;}
+    .hero-visual-panel h3{color:#fff; margin-bottom:8px;}
+    .hero-visual-panel p{color:rgba(255,255,255,.6); margin:0;}
+    .hero-orb{position:absolute; border-radius:50%; filter:blur(50px); z-index:0; opacity:.5; pointer-events:none;}
+    .hero-orb-1{width:220px; height:220px; background:var(--gold); top:-40px; right:-40px;}
+    .hero-orb-2{width:180px; height:180px; background:#8a6fd8; bottom:-30px; left:-30px;}
+    .hero-scroll{position:relative; z-index:2; text-align:center; padding-bottom:26px;}
+    .hero-scroll a{color:rgba(255,255,255,.55); font-size:.78rem; display:inline-flex; flex-direction:column; align-items:center; gap:6px;}
+
+    /* ---------- Section headers ---------- */
+    .section-label{
+      display:inline-block; font-size:.78rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+      color:var(--gold); margin-bottom:12px;
+    }
+    .section-title{font-size:clamp(1.6rem,3vw,2.3rem); font-weight:700; color:var(--ink); margin-bottom:16px; line-height:1.25;}
+    .section-subtitle{color:var(--muted); font-size:1rem; max-width:640px; line-height:1.7;}
+    .section-text{color:var(--muted); font-size:.98rem; line-height:1.8; margin-bottom:16px;}
+    .section-header{margin-bottom:48px;}
+
+    /* ---------- About ---------- */
+    .about-image-wrapper{position:relative;}
+    .about-image-main{
+      aspect-ratio:4/3; border-radius:var(--radius); background:linear-gradient(135deg,var(--navy),var(--navy-2));
+      display:grid; place-items:center; box-shadow:var(--shadow-lg); overflow:hidden;
+    }
+    .about-image-main img{width:100%; height:100%; object-fit:cover; display:block;}
+    .about-visual{font-size:4rem; color:var(--gold);}
+    .about-experience-badge{
+      position:absolute; bottom:-26px; right:-14px; padding:20px 24px; text-align:center; max-width:200px;
+    }
+    .exp-number{display:block; font-family:'Poppins',sans-serif; font-weight:800; font-size:1.9rem; color:var(--gold);}
+    .exp-text{display:block; font-size:.76rem; color:var(--muted); margin-top:4px;}
+    .about-features{list-style:none; padding:0; margin:18px 0 0;}
+    .about-features li{color:var(--ink); font-size:.94rem; margin-bottom:12px; display:flex; gap:10px; align-items:flex-start;}
+    .about-features i{color:var(--gold); margin-top:3px;}
+
+    /* ---------- Services ---------- */
+    .service-card{padding:34px 28px; height:100%;}
+    .service-icon{
+      width:56px; height:56px; border-radius:13px; display:grid; place-items:center;
+      background:linear-gradient(135deg,var(--navy),var(--navy-2)); color:var(--gold); font-size:1.4rem; margin-bottom:20px;
+    }
+    .service-card h3{font-size:1.15rem; margin-bottom:10px; color:var(--ink);}
+    .service-card p{color:var(--muted); font-size:.92rem; line-height:1.7; margin-bottom:16px;}
+    .service-link{color:var(--gold); font-weight:600; font-size:.88rem; display:inline-flex; align-items:center; gap:6px;}
+    .service-link i{font-size:.76rem; transition:transform .2s;}
+    .service-link:hover i{transform:translateX(3px);}
+
+    /* ---------- Industries ---------- */
+    .industry-card{
+      display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center;
+      padding:26px 12px; border-radius:var(--radius); background:var(--bg-soft); border:1px solid var(--line);
+      color:var(--ink); transition:transform .2s, background .2s, color .2s;
+    }
+    .industry-card i{font-size:1.6rem; color:var(--gold);}
+    .industry-card span{font-size:.85rem; font-weight:600;}
+    .industry-card:hover{transform:translateY(-4px); background:var(--navy); color:#fff;}
+
+    /* ---------- Why Us ---------- */
+    .why-card{padding:26px 22px; height:100%;}
+    .why-icon{
+      width:46px; height:46px; border-radius:11px; display:grid; place-items:center;
+      background:rgba(201,168,76,.12); color:var(--gold); font-size:1.15rem; margin-bottom:14px;
+    }
+    .why-card h4{font-size:1.02rem; margin-bottom:8px; color:var(--ink);}
+    .why-card p{font-size:.86rem; color:var(--muted); line-height:1.6; margin:0;}
+
+    /* ---------- Process Timeline ---------- */
+    .process-timeline{display:flex; flex-direction:column; gap:20px; max-width:820px; margin:0 auto;}
+    .process-step{display:flex; align-items:center; gap:24px;}
+    .process-number{
+      flex:0 0 56px; height:56px; border-radius:50%; display:grid; place-items:center;
+      background:linear-gradient(135deg,var(--navy),var(--navy-2)); color:var(--gold);
+      font-family:'Poppins',sans-serif; font-weight:700; font-size:1.1rem;
+    }
+    .process-content{padding:18px 22px; flex:1;}
+    .process-content h4{font-size:1rem; margin-bottom:5px; color:var(--ink);}
+    .process-content p{font-size:.86rem; color:var(--muted); margin:0; line-height:1.6;}
+    @media (max-width:575.98px){
+      .process-step{gap:14px;}
+      .process-number{flex:0 0 44px; height:44px; font-size:.92rem;}
+      .process-content{padding:14px 16px;}
+    }
+
+    /* ---------- Stats ---------- */
+    .stats-section{position:relative; background:var(--navy); overflow:hidden;}
+    .stats-gradient-bg{position:absolute; inset:0; background:radial-gradient(circle at 30% 30%, rgba(201,168,76,.14), transparent 60%);}
+    .stat-card{position:relative; z-index:1; padding:10px;}
+    .stat-icon{font-size:1.6rem; color:var(--gold); margin-bottom:10px;}
+    .stat-number{font-family:'Poppins',sans-serif; font-weight:800; font-size:2.2rem; color:#fff;}
+    .stat-text{font-size:1.5rem;}
+    .stat-label{color:rgba(255,255,255,.6); font-size:.82rem; margin-top:6px;}
+
+    /* ---------- Clients ---------- */
+    .clients-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:16px;}
+    @media (max-width:767.98px){.clients-grid{grid-template-columns:repeat(2,1fr);}}
+    .client-logo{
+      display:grid; place-items:center; padding:20px 12px; text-align:center;
+      color:var(--muted); font-weight:600; font-size:.85rem; min-height:80px;
+    }
+
+    /* ---------- Testimonials ---------- */
+    .testimonial-card{padding:32px 28px; height:100%;}
+    .testimonial-rating{color:var(--gold); font-size:.85rem; margin-bottom:14px;}
+    .testimonial-text{color:var(--ink); font-size:.96rem; line-height:1.75; font-style:italic; margin-bottom:20px;}
+    .testimonial-author{display:flex; align-items:center; gap:12px;}
+    .author-avatar{
+      width:44px; height:44px; border-radius:50%; display:grid; place-items:center;
+      background:linear-gradient(135deg,var(--navy),var(--navy-2)); color:var(--gold);
+      font-family:'Poppins',sans-serif; font-weight:700; font-size:.85rem; flex:0 0 auto;
+    }
+    .testimonial-author strong{display:block; font-size:.9rem; color:var(--ink);}
+    .testimonial-author span{font-size:.78rem; color:var(--muted);}
+    .swiper-pagination-bullet{background:var(--gold) !important;}
+
+    /* ---------- CTA ---------- */
+    .cta-wrapper{
+      padding:48px 42px; background:linear-gradient(135deg,var(--navy),var(--navy-2)) !important;
+      border:0 !important;
+    }
+    .cta-wrapper h2{color:#fff; font-size:1.7rem; margin-bottom:10px;}
+    .cta-wrapper p{color:rgba(255,255,255,.7); margin:0;}
+    @media (max-width:575.98px){.cta-wrapper{padding:32px 24px;}}
+
+    /* ---------- Newsletter ---------- */
+    .newsletter-wrapper{padding:42px;}
+    .newsletter-wrapper h3{font-size:1.3rem; color:var(--ink); margin-bottom:8px;}
+    .newsletter-wrapper p{color:var(--muted); font-size:.92rem; margin:0;}
+    .newsletter-form .form-control{
+      padding:13px 16px; border-radius:10px 0 0 10px !important; border-color:var(--line); background:var(--bg-soft); color:var(--ink);
+    }
+    .newsletter-form .btn{border-radius:0 10px 10px 0 !important; padding:13px 22px;}
+    @media (max-width:575.98px){.newsletter-wrapper{padding:26px 20px;}}
+
+    /* ---------- Map ---------- */
+    .map-wrapper{position:relative;}
+    .map-wrapper iframe{display:block; filter:grayscale(.15);}
+    .map-overlay-card{
+      position:absolute; bottom:24px; left:24px; padding:22px 26px; max-width:320px;
+      background:var(--bg); z-index:2;
+    }
+    .map-overlay-card h4{font-size:1rem; margin-bottom:10px; color:var(--ink);}
+    .map-overlay-card p{font-size:.85rem; color:var(--muted); line-height:1.6; margin-bottom:14px;}
+    @media (max-width:575.98px){
+      .map-overlay-card{position:static; max-width:100%; border-radius:0;}
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer{background:var(--navy); color:rgba(255,255,255,.7);}
+    .footer-top{padding:60px 0 30px;}
+    .footer-brand{display:inline-flex; align-items:center; gap:10px; margin-bottom:16px;}
+    .footer-brand .brand-name{color:#fff;}
+    .footer-brand .brand-sub{color:rgba(255,255,255,.5);}
+    .footer-about{font-size:.86rem; line-height:1.7; color:rgba(255,255,255,.55); max-width:340px;}
+    .site-footer h5{color:#fff; font-size:.95rem; margin-bottom:18px;}
+    .footer-links{list-style:none; padding:0; margin:0;}
+    .footer-links li{margin-bottom:11px;}
+    .footer-links a{color:rgba(255,255,255,.6); font-size:.86rem; transition:color .2s;}
+    .footer-links a:hover{color:var(--gold);}
+    .footer-contact{list-style:none; padding:0; margin:0;}
+    .footer-contact li{display:flex; gap:10px; align-items:flex-start; font-size:.85rem; color:rgba(255,255,255,.6); margin-bottom:14px; line-height:1.6;}
+    .footer-contact i{color:var(--gold); margin-top:3px; flex:0 0 16px;}
+    .footer-contact a{color:rgba(255,255,255,.6);}
+    .footer-contact a:hover{color:var(--gold);}
+    .footer-bottom{padding:20px 0; border-top:1px solid rgba(255,255,255,.08); font-size:.82rem;}
+    .footer-bottom a{color:rgba(255,255,255,.6);}
+    .footer-bottom a:hover{color:var(--gold);}
+
+    /* ---------- Back to top ---------- */
+    .back-to-top{
+      position:fixed; right:20px; bottom:92px; z-index:998;
+      width:44px; height:44px; border-radius:50%; border:0; display:none; place-items:center;
+      background:var(--navy); color:var(--gold); box-shadow:var(--shadow-lg); cursor:pointer;
+      transition:opacity .2s;
+    }
+    .back-to-top.show{display:grid;}
+    @media (max-width:575.98px){.back-to-top{right:14px; bottom:78px; width:40px; height:40px;}}
+
+    /* Dark theme section backgrounds */
+    [data-theme="dark"] .service-card,[data-theme="dark"] .why-card,
+    [data-theme="dark"] .testimonial-card,[data-theme="dark"] .client-logo,
+    [data-theme="dark"] .process-content,[data-theme="dark"] .newsletter-wrapper,
+    [data-theme="dark"] .map-overlay-card{background:var(--bg-soft);}
+    [data-theme="dark"] .industry-card{background:var(--bg-soft);}
+  </style>
+
+  <!-- ==================== CANDIDATE REGISTRATION FORM + FLOATING BUTTON STYLES ==================== -->
+  <style>
+    /* Self-contained — prefixed with .rn- so it never clashes with style.css */
+    .rn-reg-card{
+      position:relative; z-index:3;
+      max-width:480px; margin-left:auto;
+      background:rgba(255,255,255,.10);
+      backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,.20);
+      border-radius:20px; padding:28px 26px;
+      box-shadow:0 24px 60px rgba(0,0,0,.28);
+      font-family:'Inter',sans-serif;
+    }
+    .rn-reg-head{display:flex; align-items:flex-start; gap:14px; margin-bottom:20px;}
+    .rn-reg-icon{
+      flex:0 0 46px; width:46px; height:46px; border-radius:12px;
+      display:grid; place-items:center; font-size:1.15rem; color:#fff;
+      background:linear-gradient(135deg,#c9a84c,#f0d27a);
+      box-shadow:0 6px 18px rgba(201,168,76,.35);
+    }
+    .rn-reg-title{
+      font-family:'Poppins',sans-serif; font-weight:700;
+      font-size:1.28rem; margin:0 0 4px; color:#fff; line-height:1.25;
+    }
+    .rn-reg-sub{font-size:.83rem; margin:0; color:rgba(255,255,255,.72); line-height:1.5;}
+
+    .rn-field{margin-bottom:14px;}
+    .rn-field label{
+      display:block; font-size:.78rem; font-weight:600; letter-spacing:.3px;
+      color:rgba(255,255,255,.85); margin-bottom:6px; text-transform:uppercase;
+    }
+    .rn-req{color:#f0b429;}
+
+    .rn-input-wrap{
+      display:flex; align-items:center; gap:9px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:11px; padding:0 13px;
+      transition:border-color .2s, background .2s, box-shadow .2s;
+    }
+    .rn-input-wrap:focus-within{
+      border-color:#c9a84c; background:rgba(255,255,255,.13);
+      box-shadow:0 0 0 3px rgba(201,168,76,.16);
+    }
+    .rn-input-wrap > i{color:rgba(255,255,255,.55); font-size:.88rem; width:16px; text-align:center;}
+    .rn-prefix{color:rgba(255,255,255,.75); font-size:.9rem; font-weight:600; border-right:1px solid rgba(255,255,255,.18); padding-right:9px;}
+    .rn-input-wrap input{
+      flex:1; width:100%; background:transparent; border:0; outline:0;
+      color:#fff; font-size:.94rem; padding:12px 0; min-width:0;
+    }
+    .rn-input-wrap input::placeholder{color:rgba(255,255,255,.42);}
+    .rn-input-wrap.rn-invalid{border-color:#e5484d; box-shadow:0 0 0 3px rgba(229,72,77,.15);}
+
+    .rn-file-drop{
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      gap:5px; text-align:center; cursor:pointer;
+      padding:20px 14px; border-radius:12px;
+      border:1.5px dashed rgba(255,255,255,.30);
+      background:rgba(255,255,255,.05);
+      transition:border-color .2s, background .2s;
+      text-transform:none !important; letter-spacing:0 !important;
+      margin-bottom:0 !important;
+    }
+    .rn-file-drop:hover,.rn-file-drop.rn-dragover{border-color:#c9a84c; background:rgba(201,168,76,.10);}
+    .rn-file-drop i{font-size:1.5rem; color:#c9a84c;}
+    .rn-file-text{font-size:.88rem; color:rgba(255,255,255,.88); font-weight:500; word-break:break-word;}
+    .rn-file-drop small{font-size:.72rem; color:rgba(255,255,255,.50);}
+    .rn-file-drop.rn-has-file{border-style:solid; border-color:#2fbf71; background:rgba(47,191,113,.10);}
+    .rn-file-drop.rn-has-file i{color:#2fbf71;}
+    .rn-file-drop.rn-invalid{border-color:#e5484d;}
+
+    .rn-submit{
+      width:100%; margin-top:18px; padding:14px 18px;
+      border:0; border-radius:11px; cursor:pointer;
+      font-family:'Poppins',sans-serif; font-weight:600; font-size:.98rem; color:#0f172a;
+      background:linear-gradient(135deg,#c9a84c,#f0d27a);
+      box-shadow:0 10px 26px rgba(201,168,76,.32);
+      transition:transform .18s, box-shadow .18s, opacity .18s;
+    }
+    .rn-submit:hover:not(:disabled){transform:translateY(-2px); box-shadow:0 14px 32px rgba(201,168,76,.42);}
+    .rn-submit:disabled{opacity:.65; cursor:not-allowed; transform:none;}
+
+    .rn-privacy{
+      margin:12px 0 0; font-size:.72rem; text-align:center;
+      color:rgba(255,255,255,.52); line-height:1.5;
+    }
+    .rn-privacy i{margin-right:4px;}
+
+    .rn-status{
+      margin-top:14px; padding:12px 14px; border-radius:10px;
+      font-size:.86rem; line-height:1.5; text-align:center;
+    }
+    .rn-status.rn-ok{background:rgba(47,191,113,.15); border:1px solid rgba(47,191,113,.45); color:#a7f3c9;}
+    .rn-status.rn-err{background:rgba(229,72,77,.15); border:1px solid rgba(229,72,77,.45); color:#ffc9cb;}
+
+    /* Light theme adjustments */
+    [data-theme="light"] .rn-reg-card{
+      background:rgba(255,255,255,.90); border-color:rgba(15,23,42,.10);
+      box-shadow:0 24px 60px rgba(15,23,42,.14);
+    }
+    [data-theme="light"] .rn-reg-title{color:#0f172a;}
+    [data-theme="light"] .rn-reg-sub{color:#5b6576;}
+    [data-theme="light"] .rn-field label{color:#334155;}
+    [data-theme="light"] .rn-input-wrap{background:#f5f7fa; border-color:rgba(15,23,42,.12);}
+    [data-theme="light"] .rn-input-wrap input{color:#0f172a;}
+    [data-theme="light"] .rn-input-wrap input::placeholder{color:#9aa4b2;}
+    [data-theme="light"] .rn-input-wrap > i,[data-theme="light"] .rn-prefix{color:#64748b;}
+    [data-theme="light"] .rn-file-drop{background:#f5f7fa; border-color:rgba(15,23,42,.18);}
+    [data-theme="light"] .rn-file-text{color:#0f172a;}
+    [data-theme="light"] .rn-file-drop small{color:#7a8699;}
+    [data-theme="light"] .rn-privacy{color:#7a8699;}
+    [data-theme="light"] .rn-status.rn-ok{color:#137a4a;}
+    [data-theme="light"] .rn-status.rn-err{color:#b32629;}
+
+    /* Mobile */
+    @media (max-width:991.98px){
+      .rn-reg-card{max-width:100%; margin:36px auto 0; padding:24px 20px;}
+      .hero-section .min-vh-100{min-height:auto !important; padding:110px 0 60px;}
+    }
+    @media (max-width:575.98px){
+      .rn-reg-card{padding:22px 16px; border-radius:16px;}
+      .rn-reg-title{font-size:1.14rem;}
+      .rn-input-wrap input{font-size:16px;} /* prevents iOS zoom-on-focus */
+    }
+
+    /* ---- Floating WhatsApp + Call buttons ---- */
+    .floating-buttons{
+      position:fixed; right:20px; bottom:24px; z-index:999;
+      display:flex; flex-direction:column; gap:12px;
+    }
+    .float-btn{
+      width:54px; height:54px; border-radius:50%;
+      display:grid; place-items:center; color:#fff; font-size:1.35rem;
+      box-shadow:0 8px 22px rgba(0,0,0,.28);
+      transition:transform .2s, box-shadow .2s;
+    }
+    .float-btn:hover{transform:translateY(-3px) scale(1.05); color:#fff;}
+    .whatsapp-btn{background:#25D366;}
+    .whatsapp-btn:hover{box-shadow:0 12px 26px rgba(37,211,102,.45);}
+    .call-btn{background:linear-gradient(135deg,#c9a84c,#f0d27a); color:#0f172a;}
+    .call-btn:hover{color:#0f172a; box-shadow:0 12px 26px rgba(201,168,76,.45);}
+    @media (max-width:575.98px){
+      .floating-buttons{right:14px; bottom:18px; gap:10px;}
+      .float-btn{width:48px; height:48px; font-size:1.2rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== LOADING SCREEN ==================== -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">
+        <span class="logo-icon"><i class="fas fa-users-gear"></i></span>
+        <span class="logo-text">RIDHANOVA</span>
+      </div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+      <p class="loading-tagline">Connecting Talent. Building Success.</p>
+    </div>
+  </div>
+
+  <!-- ==================== STICKY NAVIGATION ==================== -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-icon"><i class="fas fa-users-gear"></i></span>
+          <span class="brand-text">
+            <span class="brand-name">RIDHANOVA</span>
+            <span class="brand-sub">Workforce Solutions</span>
+          </span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#industries">Industries</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cta">Employers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#register">Job Seekers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#register">Careers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#map">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+      <div id="particles-js" class="particles-bg"></div>
+      <div class="hero-gradient-overlay"></div>
+      <div class="container hero-container">
+        <div class="row align-items-center min-vh-100">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+            <div class="hero-badge">
+              <i class="fas fa-star"></i>
+              <span>Trusted Workforce Partner in Chennai</span>
+            </div>
+            <h1 class="hero-title">
+              Connecting <span class="text-gradient">Talent</span>.<br>
+              Building <span class="text-gradient-gold">Success</span>.
+            </h1>
+            <p class="hero-subtitle">
+              <span id="typed-text"></span>
+            </p>
+            <p class="hero-description">
+              Ridhanova Workforce Solutions delivers end-to-end recruitment, HR consulting, and workforce management services to enterprises across Chennai and Tamil Nadu. We bridge the gap between exceptional talent and visionary organizations.
+            </p>
+            <div class="hero-cta">
+              <a href="#cta" class="btn btn-primary btn-lg hero-btn">
+                <i class="fas fa-briefcase me-2"></i>Hire Talent
+              </a>
+              <a href="#register" class="btn btn-outline-light btn-lg hero-btn">
+                <i class="fas fa-file-arrow-up me-2"></i>Register Your Profile
+              </a>
+            </div>
+            <div class="hero-trust">
+              <div class="trust-item">
+                <i class="fas fa-shield-halved"></i>
+                <span>ISO Compliant Processes</span>
+              </div>
+              <div class="trust-item">
+                <i class="fas fa-clock"></i>
+                <span>48-Hour Shortlisting</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <div class="hero-illustration">
+
+              <!-- ========== CANDIDATE REGISTRATION FORM ========== -->
+              <div class="rn-reg-card" id="register">
+                <div class="rn-reg-head">
+                  <div class="rn-reg-icon"><i class="fas fa-id-card"></i></div>
+                  <div>
+                    <h3 class="rn-reg-title">Candidate Registration</h3>
+                    <p class="rn-reg-sub">Share your profile — our team will get back within 48 hours.</p>
+                  </div>
+                </div>
+
+                <form id="candidate-form" class="rn-reg-form" novalidate>
+                  <div class="rn-field">
+                    <label for="cand-name">Full Name <span class="rn-req">*</span></label>
+                    <div class="rn-input-wrap">
+                      <i class="fas fa-user"></i>
+                      <input type="text" id="cand-name" name="name" placeholder="e.g. Arun Kumar" required autocomplete="name">
+                    </div>
+                  </div>
+
+                  <div class="rn-field">
+                    <label for="cand-phone">Contact Number <span class="rn-req">*</span></label>
+                    <div class="rn-input-wrap">
+                      <i class="fas fa-phone"></i>
+                      <span class="rn-prefix">+91</span>
+                      <input type="tel" id="cand-phone" name="phone" placeholder="10-digit mobile number"
+                             inputmode="numeric" maxlength="10" required autocomplete="tel">
+                    </div>
+                  </div>
+
+                  <div class="rn-field">
+                    <label for="cand-location">Location <span class="rn-req">*</span></label>
+                    <div class="rn-input-wrap">
+                      <i class="fas fa-location-dot"></i>
+                      <input type="text" id="cand-location" name="location" placeholder="e.g. Madipakkam, Chennai" required>
+                    </div>
+                  </div>
+
+                  <div class="rn-field">
+                    <label for="cand-resume">Upload Resume <span class="rn-req">*</span></label>
+                    <label class="rn-file-drop" for="cand-resume" id="rn-file-drop">
+                      <input type="file" id="cand-resume" name="resume" accept=".pdf,.doc,.docx" required hidden>
+                      <i class="fas fa-cloud-arrow-up"></i>
+                      <span class="rn-file-text" id="rn-file-text">Click to upload your resume</span>
+                      <small>PDF, DOC or DOCX &middot; max 5 MB</small>
+                    </label>
+                  </div>
+
+                  <button type="submit" class="rn-submit" id="rn-submit">
+                    <span class="rn-submit-label"><i class="fas fa-paper-plane me-2"></i>Submit Application</span>
+                    <span class="rn-spinner" hidden><i class="fas fa-circle-notch fa-spin me-2"></i>Uploading…</span>
+                  </button>
+
+                  <p class="rn-privacy"><i class="fas fa-lock"></i> Your details stay confidential and are shared only with matching employers.</p>
+                  <div class="rn-status" id="rn-status" role="status" aria-live="polite" hidden></div>
+                </form>
+              </div>
+              <!-- ========== /CANDIDATE REGISTRATION FORM ========== -->
+
+              <div class="hero-orb hero-orb-1"></div>
+              <div class="hero-orb hero-orb-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <a href="#about" aria-label="Scroll to about section">
+          <span>Discover More</span>
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="about-image-wrapper">
+              <div class="about-image-main">
+                <img src="https://res.cloudinary.com/lfgnusmd/image/upload/v1785264125/Hiring_oxsjnx.jpg"
+                     alt="Ridhanova Workforce Solutions — Recruitment and Hiring" loading="lazy">
+              </div>
+              <div class="about-experience-badge glass-card">
+                <span class="exp-number">12+</span>
+                <span class="exp-text">Years of Excellence in Workforce Solutions</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <span class="section-label">About Ridhanova</span>
+            <h2 class="section-title">Your Strategic Partner in <span class="text-gradient">Human Capital</span></h2>
+            <p class="section-text">
+              Founded in Chennai, Ridhanova Workforce Solutions has grown into a trusted name in recruitment and HR consulting across Tamil Nadu and beyond. We combine deep industry expertise with a people-first approach to deliver workforce solutions that drive measurable business outcomes.
+            </p>
+            <p class="section-text">
+              From permanent staffing and executive search to bulk recruitment and campus hiring, our integrated services help organizations across Chennai and Tamil Nadu scale with confidence while empowering professionals to achieve their career aspirations.
+            </p>
+            <ul class="about-features">
+              <li><i class="fas fa-check-circle"></i> Chennai &amp; Tamil Nadu recruitment network</li>
+              <li><i class="fas fa-check-circle"></i> Dedicated industry vertical teams</li>
+              <li><i class="fas fa-check-circle"></i> Technology-driven hiring processes</li>
+              <li><i class="fas fa-check-circle"></i> Compliance-first operations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-label">What We Offer</span>
+          <h2 class="section-title">Comprehensive <span class="text-gradient">Workforce Services</span></h2>
+          <p class="section-subtitle mx-auto">
+            End-to-end talent solutions tailored to your organization's unique hiring and HR management needs.
+          </p>
+        </div>
+        <div class="row g-4">
+          <!-- Service Card 1 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-card glass-card">
+              <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+              <h3>Permanent Staffing</h3>
+              <p>Source, assess, and onboard full-time professionals aligned with your culture, skills requirements, and long-term growth objectives.</p>
+              <a href="#cta" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- Service Card 2 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card glass-card">
+              <div class="service-icon"><i class="fas fa-crown"></i></div>
+              <h3>Executive Search</h3>
+              <p>Confidential, targeted search for C-suite leaders, senior management, and niche specialists who shape organizational direction.</p>
+              <a href="#cta" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- Service Card 4 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card glass-card">
+              <div class="service-icon"><i class="fas fa-users"></i></div>
+              <h3>Bulk Recruitment</h3>
+              <p>High-volume hiring campaigns with structured assessment pipelines, onboarding support, and rapid deployment capabilities.</p>
+              <a href="#cta" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- Service Card 6 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card glass-card">
+              <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+              <h3>Campus Recruitment</h3>
+              <p>Connect with emerging talent through structured campus drives, aptitude assessments, and graduate onboarding programs.</p>
+              <a href="#cta" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INDUSTRIES SECTION ==================== -->
+    <section class="section industries-section" id="industries">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-label">Sector Expertise</span>
+          <h2 class="section-title">Industries We <span class="text-gradient">Serve</span></h2>
+          <p class="section-subtitle mx-auto">
+            Deep vertical knowledge across key industries in Chennai and Tamil Nadu, enabling precise talent matching and faster time-to-hire.
+          </p>
+        </div>
+        <div class="row g-3">
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="0">
+            <a href="#register" class="industry-card">
+              <i class="fas fa-heart-pulse"></i>
+              <span>Healthcare</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="50">
+            <a href="#register" class="industry-card">
+              <i class="fas fa-laptop-code"></i>
+              <span>Information Technology</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="#register" class="industry-card">
+              <i class="fas fa-industry"></i>
+              <span>Manufacturing</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+            <a href="#register" class="industry-card">
+              <i class="fas fa-hard-hat"></i>
+              <span>Construction</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="0">
+            <a href="#register" class="industry-card">
+              <i class="fas fa-store"></i>
+              <span>Retail</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="50">
+            <a href="#register" class="industry-card">
+              <i class="fas fa-building-columns"></i>
+              <span>Banking</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="#register" class="industry-card">
+              <i class="fas fa-hotel"></i>
+              <span>Hospitality</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+            <a href="#register" class="industry-card">
+              <i class="fas fa-truck-fast"></i>
+              <span>Logistics</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US ==================== -->
+    <section class="section why-section" id="why-us">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5" data-aos="fade-right">
+            <span class="section-label">Why Ridhanova</span>
+            <h2 class="section-title">The Difference That <span class="text-gradient-gold">Delivers Results</span></h2>
+            <p class="section-text">
+              We don't just fill positions — we build lasting partnerships. Our methodology combines market intelligence, rigorous assessment, and personalized service to ensure every placement contributes to your success.
+            </p>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="row g-4">
+              <div class="col-sm-6">
+                <div class="why-card glass-card">
+                  <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                  <h4>Rapid Turnaround</h4>
+                  <p>Average shortlist delivery within 48 hours for standard roles, with dedicated account managers ensuring momentum.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="why-card glass-card">
+                  <div class="why-icon"><i class="fas fa-chart-line"></i></div>
+                  <h4>Quality Metrics</h4>
+                  <p>94% candidate retention rate at 12 months, backed by structured feedback loops and post-placement support.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="why-card glass-card">
+                  <div class="why-icon"><i class="fas fa-lock"></i></div>
+                  <h4>Compliance Assured</h4>
+                  <p>Full statutory compliance, background verification, and documentation aligned with Indian labor regulations.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="why-card glass-card">
+                  <div class="why-icon"><i class="fas fa-headset"></i></div>
+                  <h4>Dedicated Support</h4>
+                  <p>Single point of contact with 24/7 escalation support for urgent hiring needs and workforce emergencies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== RECRUITMENT PROCESS TIMELINE ==================== -->
+    <section class="section process-section" id="process">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-label">Our Methodology</span>
+          <h2 class="section-title">Recruitment <span class="text-gradient">Process</span></h2>
+          <p class="section-subtitle mx-auto">
+            A proven six-step framework that transforms hiring from a challenge into a competitive advantage.
+          </p>
+        </div>
+        <div class="process-timeline" data-aos="fade-up">
+          <div class="process-step">
+            <div class="process-number">01</div>
+            <div class="process-content glass-card">
+              <h4>Requirement Analysis</h4>
+              <p>Deep dive into role specifications, team dynamics, and organizational culture to define the ideal candidate profile.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-number">02</div>
+            <div class="process-content glass-card">
+              <h4>Talent Sourcing</h4>
+              <p>Multi-channel outreach through our proprietary database, professional networks, and targeted job marketing campaigns.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-number">03</div>
+            <div class="process-content glass-card">
+              <h4>Screening & Assessment</h4>
+              <p>Structured interviews, skill evaluations, and psychometric testing to validate competency and cultural alignment.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-number">04</div>
+            <div class="process-content glass-card">
+              <h4>Client Presentation</h4>
+              <p>Curated shortlists with detailed candidate profiles, assessment reports, and compensation benchmarking data.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-number">05</div>
+            <div class="process-content glass-card">
+              <h4>Interview Coordination</h4>
+              <p>End-to-end scheduling, feedback collection, and negotiation support through offer acceptance.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-number">06</div>
+            <div class="process-content glass-card">
+              <h4>Onboarding & Follow-up</h4>
+              <p>Joining formalities, documentation, and 90-day post-placement check-ins to ensure successful integration.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ANIMATED STATISTICS ==================== -->
+    <section class="section stats-section" id="stats">
+      <div class="stats-gradient-bg"></div>
+      <div class="container position-relative">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-users"></i></div>
+              <div class="stat-number"><span class="counter" data-target="600">0</span>+</div>
+              <div class="stat-label">Placements Delivered</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-location-dot"></i></div>
+              <div class="stat-number stat-text">Chennai</div>
+              <div class="stat-label">Tamil Nadu Focus</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-industry"></i></div>
+              <div class="stat-number"><span class="counter" data-target="5">0</span></div>
+              <div class="stat-label">Industry Verticals</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-building"></i></div>
+              <div class="stat-number"><span class="counter" data-target="5">0</span>+</div>
+              <div class="stat-label">Partner Organizations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CLIENT LOGOS ==================== -->
+    <section class="section clients-section" id="clients">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-label">Trusted By</span>
+          <h2 class="section-title">Organizations That <span class="text-gradient">Choose Ridhanova</span></h2>
+        </div>
+        <div class="clients-grid clients-grid-5" data-aos="fade-up">
+          <div class="client-logo glass-card"><span>Butterfly</span></div>
+          <div class="client-logo glass-card"><span>Daimler</span></div>
+          <div class="client-logo glass-card"><span>BHEL</span></div>
+          <div class="client-logo glass-card"><span>Caterpillar</span></div>
+          <div class="client-logo glass-card"><span>Rooftop Construction</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS SLIDER ==================== -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-label">Client Voices</span>
+          <h2 class="section-title">What Our <span class="text-gradient-gold">Partners Say</span></h2>
+        </div>
+        <div class="swiper testimonials-swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card glass-card">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Ridhanova transformed our hiring process. They filled 45 engineering positions in under six weeks with candidates who exceeded our technical benchmarks. Their understanding of the manufacturing sector is unmatched."</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">RK</div>
+                  <div>
+                    <strong>Rajesh Kumar</strong>
+                    <span>VP Human Resources, Axis Manufacturing Pvt. Ltd.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card glass-card">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"From executive search to payroll management, Ridhanova handles our entire workforce lifecycle. Their compliance expertise and responsive account team have made them an indispensable partner for our Chennai operations."</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">PS</div>
+                  <div>
+                    <strong>Priya Srinivasan</strong>
+                    <span>Director of Operations, TechNova Systems</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card glass-card">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"As a job seeker, Ridhanova guided me through every step — resume refinement, interview preparation, and salary negotiation. I landed my dream role in healthcare administration within three weeks of registering."</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">AM</div>
+                  <div>
+                    <strong>Arun Mehta</strong>
+                    <span>Healthcare Administrator, Meridian Healthcare</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CALL TO ACTION ==================== -->
+    <section class="section cta-section" id="cta">
+      <div class="container">
+        <div class="cta-wrapper glass-card" data-aos="zoom-in">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h2>Ready to Transform Your Workforce Strategy?</h2>
+              <p>Whether you're hiring talent or seeking your next opportunity, Ridhanova is here to guide you every step of the way.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+              <a href="#map" class="btn btn-primary btn-lg me-2 mb-2">Get In Touch</a>
+              <a href="#cta" class="btn btn-outline-light btn-lg mb-2">Partner With Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="section newsletter-section" id="newsletter">
+      <div class="container">
+        <div class="newsletter-wrapper glass-card" data-aos="fade-up">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <h3>Stay Updated on Career Opportunities</h3>
+              <p>Subscribe to receive the latest job openings, industry insights, and workforce trends directly in your inbox.</p>
+            </div>
+            <div class="col-lg-6">
+              <form class="newsletter-form" id="newsletter-form">
+                <div class="input-group">
+                  <input type="email" class="form-control" placeholder="Enter your email address" required aria-label="Email for newsletter">
+                  <button class="btn btn-primary" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GOOGLE MAP ==================== -->
+    <section class="section map-section" id="map">
+      <div class="container-fluid p-0">
+        <div class="map-wrapper" data-aos="fade-up">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9!2d80.198!3d12.965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261b8b8b8b8b9%3A0x0!2sMadipakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600091!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ridhanova Workforce Solutions — Madipakkam, Chennai Office Location">
+          </iframe>
+          <div class="map-overlay-card glass-card">
+            <h4><i class="fas fa-location-dot text-gold"></i> Our Office</h4>
+            <p>X57Q+G8H, Alamelumangapuram 1st Main Rd,<br>Ganesh Nagar, Iyappa Nagar, Madipakkam,<br>Chennai, Moovarasampettai, Tamil Nadu 600091</p>
+            <a href="#map" class="btn btn-primary btn-sm">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Footer Brand -->
+          <div class="col-lg-4">
+            <a class="footer-brand" href="index.html">
+              <span class="brand-icon"><i class="fas fa-users-gear"></i></span>
+              <span class="brand-text">
+                <span class="brand-name">RIDHANOVA</span>
+                <span class="brand-sub">Workforce Solutions</span>
+              </span>
+            </a>
+            <p class="footer-about">
+              Connecting Talent. Building Success. Premium recruitment and workforce management services based in Chennai, serving organizations across Tamil Nadu.
+            </p>
+          </div>
+          <!-- Quick Links -->
+          <div class="col-6 col-lg-2">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#industries">Industries</a></li>
+              <li><a href="#register">Careers</a></li>
+              <li><a href="#map">Contact</a></li>
+            </ul>
+          </div>
+          <!-- Services -->
+          <div class="col-6 col-lg-2">
+            <h5>Services</h5>
+            <ul class="footer-links">
+              <li><a href="#cta">Permanent Staffing</a></li>
+              <li><a href="#cta">Executive Search</a></li>
+              <li><a href="#cta">Bulk Hiring</a></li>
+              <li><a href="#cta">Campus Recruitment</a></li>
+              <li><a href="#cta">HR Consulting</a></li>
+            </ul>
+          </div>
+          <!-- Contact Info -->
+          <div class="col-lg-4">
+            <h5>Contact Us</h5>
+            <ul class="footer-contact">
+              <li><i class="fas fa-location-dot"></i> X57Q+G8H, Alamelumangapuram 1st Main Rd, Ganesh Nagar, Iyappa Nagar, Madipakkam, Chennai, Moovarasampettai, Tamil Nadu 600091</li>
+              <li><i class="fas fa-phone"></i> <a href="tel:+916384877877">+91 63848 77877</a></li>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:ridhacon@gmail.com">ridhacon@gmail.com</a></li>
+              <li><i class="fas fa-clock"></i> Mon — Sat: 9:00 AM — 6:00 PM IST</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p>&copy; 2026 Ridhanova Workforce Solutions. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="mx-2">|</span>
+            <a href="terms.html">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING ELEMENTS ==================== -->
+  <!-- WhatsApp + Call -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/916384877877?text=Hello%2C%20I%27m%20interested%20in%20your%20recruitment%20services"
+       class="float-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+916384877877" class="float-btn call-btn" aria-label="Call us">
+      <i class="fas fa-phone"></i>
+    </a>
+  </div>
+
+  <!-- Back To Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+  <!-- Core site behavior — self-contained (no external assets/js/ files needed) -->
+  <script>
+  (function () {
+    /* ---------- Loading screen ---------- */
+    window.addEventListener('load', function () {
+      var ls = document.getElementById('loading-screen');
+      if (ls) setTimeout(function () { ls.classList.add('loaded'); }, 350);
+    });
+
+    /* ---------- AOS ---------- */
+    if (window.AOS) AOS.init({ duration: 800, once: true, offset: 60 });
+
+    /* ---------- Typed.js hero subtitle ---------- */
+    if (window.Typed && document.getElementById('typed-text')) {
+      new Typed('#typed-text', {
+        strings: ['Recruitment Made Simple.', 'HR Consulting, Reimagined.', 'Your Workforce Partner.'],
+        typeSpeed: 45, backSpeed: 25, backDelay: 1600, loop: true
+      });
+    }
+
+    /* ---------- Particles.js hero background ---------- */
+    if (window.particlesJS && document.getElementById('particles-js')) {
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 45, density: { enable: true, value_area: 900 } },
+          color: { value: '#c9a84c' },
+          shape: { type: 'circle' },
+          opacity: { value: 0.35 },
+          size: { value: 3 },
+          line_linked: { enable: true, distance: 140, color: '#c9a84c', opacity: 0.15, width: 1 },
+          move: { enable: true, speed: 1.1, out_mode: 'out' }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: { onhover: { enable: true, mode: 'grab' }, resize: true },
+          modes: { grab: { distance: 130, line_linked: { opacity: 0.3 } } }
+        },
+        retina_detect: true
+      });
+    }
+
+    /* ---------- Swiper testimonials ---------- */
+    if (window.Swiper && document.querySelector('.testimonials-swiper')) {
+      new Swiper('.testimonials-swiper', {
+        loop: true,
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        slidesPerView: 1,
+        spaceBetween: 24,
+        breakpoints: { 768: { slidesPerView: 2 } }
+      });
+    }
+
+    /* ---------- Animated counters ---------- */
+    var counters = document.querySelectorAll('.counter');
+    if (counters.length) {
+      var animateCounter = function (el) {
+        var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+        var current = 0;
+        var step = Math.max(1, Math.ceil(target / 60));
+        var tick = function () {
+          current += step;
+          if (current >= target) { el.textContent = target; return; }
+          el.textContent = current;
+          requestAnimationFrame(tick);
+        };
+        tick();
+      };
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { animateCounter(entry.target); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.4 });
+      counters.forEach(function (c) { obs.observe(c); });
+    }
+
+    /* ---------- Sticky header on scroll ---------- */
+    var header = document.getElementById('site-header');
+    function onScroll() {
+      if (!header) return;
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+
+      var backBtn = document.getElementById('back-to-top');
+      if (backBtn) {
+        if (window.scrollY > 500) backBtn.classList.add('show');
+        else backBtn.classList.remove('show');
+      }
+    }
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+
+    /* ---------- Back to top ---------- */
+    var backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+      backToTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    /* ---------- Newsletter form (no backend — friendly confirm) ---------- */
+    var newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var emailInput = newsletterForm.querySelector('input[type="email"]');
+        if (emailInput && emailInput.value.trim()) {
+          window.open('https://wa.me/916384877877?text=' +
+            encodeURIComponent('Hi, please add me to your newsletter: ' + emailInput.value.trim()), '_blank');
+          newsletterForm.reset();
+        }
+      });
+    }
+
+    /* ---------- Collapse mobile nav after clicking a link ---------- */
+    document.querySelectorAll('#mainNav .nav-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var nav = document.getElementById('mainNav');
+        if (nav && nav.classList.contains('show') && window.bootstrap) {
+          var bsCollapse = window.bootstrap.Collapse.getOrCreateInstance(nav);
+          bsCollapse.hide();
+        }
+      });
+    });
+  })();
+  </script>
+
+  <!-- ==================== CANDIDATE REGISTRATION FORM SCRIPT ==================== -->
+  <script>
+  (function () {
+    /* ─────────────────────────────────────────────────────────────
+       Paste the Google Apps Script Web App URL here once it's deployed.
+       (See SETUP-GUIDE.md — the URL ends with /exec)
+       ───────────────────────────────────────────────────────────── */
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwtpEPDPg8rBDiuQMVJBIYDfgT1JcLAMUQwUKiMwcJt07P9xhrNoEM3NujGAj6XoWmeog/exec';
+
+    const MAX_MB = 5;
+    const ALLOWED = ['pdf', 'doc', 'docx'];
+
+    const form     = document.getElementById('candidate-form');
+    if (!form) return;
+
+    const fileIn   = document.getElementById('cand-resume');
+    const fileDrop = document.getElementById('rn-file-drop');
+    const fileText = document.getElementById('rn-file-text');
+    const btn      = document.getElementById('rn-submit');
+    const label    = btn.querySelector('.rn-submit-label');
+    const spinner  = btn.querySelector('.rn-spinner');
+    const statusEl = document.getElementById('rn-status');
+
+    /* ---------- helpers ---------- */
+    function say(msg, ok) {
+      statusEl.hidden = false;
+      statusEl.className = 'rn-status ' + (ok ? 'rn-ok' : 'rn-err');
+      statusEl.innerHTML = (ok ? '<i class="fas fa-circle-check me-1"></i>' :
+                                 '<i class="fas fa-circle-exclamation me-1"></i>') + msg;
+    }
+    function clearStatus() { statusEl.hidden = true; statusEl.className = 'rn-status'; }
+    function markBad(el)   { (el.closest('.rn-input-wrap') || el).classList.add('rn-invalid'); }
+    function clearBad()    {
+      form.querySelectorAll('.rn-invalid').forEach(function (n) { n.classList.remove('rn-invalid'); });
+    }
+    function loading(on) {
+      btn.disabled = on;
+      label.hidden = on;
+      spinner.hidden = !on;
+    }
+
+    /* ---------- phone: digits only ---------- */
+    document.getElementById('cand-phone').addEventListener('input', function (e) {
+      e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
+    });
+
+    /* ---------- file picker ---------- */
+    function showFile(f) {
+      if (!f) {
+        fileDrop.classList.remove('rn-has-file');
+        fileText.textContent = 'Click to upload your resume';
+        return;
+      }
+      fileDrop.classList.add('rn-has-file');
+      fileText.textContent = f.name + '  (' + (f.size / 1024 / 1024).toFixed(2) + ' MB)';
+    }
+    fileIn.addEventListener('change', function () { clearStatus(); clearBad(); showFile(fileIn.files[0]); });
+
+    ['dragenter', 'dragover'].forEach(function (ev) {
+      fileDrop.addEventListener(ev, function (e) { e.preventDefault(); fileDrop.classList.add('rn-dragover'); });
+    });
+    ['dragleave', 'drop'].forEach(function (ev) {
+      fileDrop.addEventListener(ev, function (e) { e.preventDefault(); fileDrop.classList.remove('rn-dragover'); });
+    });
+    fileDrop.addEventListener('drop', function (e) {
+      if (e.dataTransfer.files.length) { fileIn.files = e.dataTransfer.files; showFile(fileIn.files[0]); }
+    });
+
+    /* ---------- submit ---------- */
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      clearStatus(); clearBad();
+
+      const name     = document.getElementById('cand-name').value.trim();
+      const phone    = document.getElementById('cand-phone').value.trim();
+      const location = document.getElementById('cand-location').value.trim();
+      const file     = fileIn.files[0];
+
+      /* validation */
+      if (!name)  { markBad(document.getElementById('cand-name'));  return say('Please enter your full name.', false); }
+      if (!/^[6-9]\d{9}$/.test(phone)) {
+        markBad(document.getElementById('cand-phone'));
+        return say('Please enter a valid 10-digit Indian mobile number.', false);
+      }
+      if (!location) { markBad(document.getElementById('cand-location')); return say('Please enter your location.', false); }
+      if (!file)     { fileDrop.classList.add('rn-invalid'); return say('Please attach your resume.', false); }
+
+      const ext = file.name.split('.').pop().toLowerCase();
+      if (ALLOWED.indexOf(ext) === -1) {
+        fileDrop.classList.add('rn-invalid');
+        return say('Resume must be a PDF, DOC or DOCX file.', false);
+      }
+      if (file.size > MAX_MB * 1024 * 1024) {
+        fileDrop.classList.add('rn-invalid');
+        return say('File is too large. Maximum size is ' + MAX_MB + ' MB.', false);
+      }
+      if (SCRIPT_URL.indexOf('PASTE_YOUR') === 0) {
+        return say('Form is not connected yet. Add your Apps Script URL in index.html.', false);
+      }
+
+      loading(true);
+
+      const reader = new FileReader();
+      reader.onerror = function () { loading(false); say('Could not read the file. Please try again.', false); };
+      reader.onload = function () {
+        const payload = {
+          name:     name,
+          phone:    phone,
+          location: location,
+          fileName: file.name,
+          mimeType: file.type || 'application/octet-stream',
+          fileData: reader.result.split(',')[1]   // strip the data-URL prefix
+        };
+
+        /* Sent as text/plain on purpose: keeps it a "simple" CORS request
+           so the browser never sends a preflight Apps Script can't answer. */
+        fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(payload) })
+          .then(function (r) { return r.json(); })
+          .then(function (res) {
+            loading(false);
+            if (res && res.result === 'success') {
+              form.reset(); showFile(null);
+              say('Thank you, ' + name.split(' ')[0] + '! Your profile has been received. Our team will contact you within 48 hours.', true);
+            } else {
+              say((res && res.message) || 'Something went wrong. Please try again.', false);
+            }
+          })
+          .catch(function () {
+            loading(false);
+            say('Submission failed. Please check your connection or WhatsApp us at +91 63848 77877.', false);
+          });
+      };
+      reader.readAsDataURL(file);
+    });
+  })();
+  </script>
+</body>
+</html>
